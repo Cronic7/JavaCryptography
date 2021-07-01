@@ -22,6 +22,7 @@ public class MAC {
         mac.init(key);
 
         //Calculating the MAC
+        System.out.println(new String(String.valueOf(key)));
         String msg=new String("This is a test message");
         byte [] bytes=msg.getBytes();
         byte[] macResult=mac.doFinal(bytes);

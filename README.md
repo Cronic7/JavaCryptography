@@ -137,6 +137,9 @@ The sender and receiver share the a symetric key (k) .Essentially, a MAC is an e
 ![](img/jc1.png)
 [Image source](https://cryptopurview.com/exchanging-sensitive-information-using-message-authentication-code/)
 
+The sender sends the computed Mac value with the secret key and message then sends the computed mac value along with the message.
+In the receiver end the reveiver computes the mac value of the received message with the secrete key and if the mac value matches with the senders mac value then the message is assumed to be genuine.
+
 In Java the Mac class of the javax.crypto package provides the functionality of message authentication code. 
 #### Follow the steps given below to create message authentication code using this class.
 
@@ -234,6 +237,29 @@ Mac result:<!NGI�r~���4|�5�ʥ�$�M4�t�vP
 Process finished with exit code 0
 
 ```
+### Example code
+```java
+import com.sun.crypto.provider.AESKeyGenerator;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
+
+public class Mac1 {
+    public static void main(String[] args) throws Exception {
+        Mac mac =Mac.getInstance("HmacSha256"); //Creating Mac instance
+        byte [] secretKey="the key".getBytes(StandardCharsets.UTF_8); // secret key
+        SecretKeySpec key=new SecretKeySpec(secretKey, "AES");
+        mac.init(key);//initializing mac
+        String msg=new String("This is a test message");
+        byte [] bytes=msg.getBytes();
+        byte[] macResult=mac.doFinal(bytes);
+        System.out.println(macResult);
+
+    }
+}
+```
+
 
 
 
