@@ -24,6 +24,7 @@ public class HashFunction {
             hexString.append(Integer.toHexString(0xFF & digest[i]));
         }
         System.out.println("Hex format : " + hexString.toString());
+        System.out.println("Sha256");
 
     };
     //md5 algorithm
@@ -46,6 +47,7 @@ public class HashFunction {
         for (int i = 0;i<digest.length;i++) {
             hexString.append(Integer.toHexString(0xFF & digest[i]));
         }
+        System.out.println("Md5");
         System.out.println("Hex format : " + hexString.toString());
 
     }
@@ -69,6 +71,7 @@ public class HashFunction {
         for (int i = 0;i<digest.length;i++) {
             hexString.append(Integer.toHexString(0xFF & digest[i]));
         }
+        System.out.println("Sha1");
         System.out.println("Hex format : " + hexString.toString());
 
     };

@@ -1,7 +1,7 @@
 # JavaCryptography🔐
 The Java Cryptography Architecture (JCA) is a set of API’s to implement concepts of modern cryptography such as digital signatures, message digests, certificates, encryption, key generation and management, and secure random number generation etc.
 
-## Hash Function#️⃣
+## 1: Hash Function#️⃣
  hash function is a mathematical function that converts a numerical input value into another compressed numerical value. The input to the hash function is of arbitrary length but output is always of fixed length.
 
 Values returned by a hash function are called message digest or simply hash values.Java provides a class named MessageDigest which belongs to the package java.security. This class supports algorithms such as SHA-1, SHA 256, MD5 algorithms to convert an arbitrary length message to a message digest.
@@ -110,6 +110,21 @@ public class HashFunction {
 
 
     }
+   
 }
+
+```
+
+### Output
+```
+Sha256
+[B@4554617c
+Md5
+Hex format : 17363d9618bbd089e643f59ff71cff86
+[B@74a14482
+Sha1
+Hex format : c194ec7b8b25a7e41eb8dd3fa9f5e6617aa3976
+
+Process finished with exit code 0
 
 ```
