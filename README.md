@@ -26,7 +26,7 @@ md.update(msg.getBytes());
 byte[] digest = md.digest();
 ```
 
-### Example code
+### Example code 👩‍💻
 ```
 import sun.security.provider.MD5;
 
@@ -115,7 +115,7 @@ public class HashFunction {
 
 ```
 
-### Output
+### Output 🖨
 ```
 Sha256
 [B@4554617c
