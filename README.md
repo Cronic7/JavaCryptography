@@ -1,7 +1,7 @@
 # JavaCryptography🔐
 The Java Cryptography Architecture (JCA) is a set of API’s to implement concepts of modern cryptography such as digital signatures, message digests, certificates, encryption, key generation and management, and secure random number generation etc.
 
-## 1: Hash Function#️⃣
+## 1️⃣: Hash Function#️⃣
 Hash function is a mathematical function that converts a numerical input value into another compressed numerical value. The input to the hash function is of arbitrary length but output is always of fixed length.
 
 Values returned by a hash function are called message digest or simply hash values.Java provides a class named MessageDigest which belongs to the package java.security. This class supports algorithms such as SHA-1, SHA 256, MD5 algorithms to convert an arbitrary length message to a message digest.
@@ -26,7 +26,7 @@ md.update(msg.getBytes());
 byte[] digest = md.digest();
 ```
 
-### Example code 👩‍💻
+### Example code👩‍💻
 ```
 import sun.security.provider.MD5;
 
@@ -129,7 +129,9 @@ Process finished with exit code 0
 
 ```
 
-## MAC(Message Authentication Code)📧
+-------------------------------------------------------------End of #️⃣Function---------------------------------------------------------------------
+
+## 2️⃣:MAC(Message Authentication Code)📧
 Message Authentication code uses symetric key technique to provide message authentication.
 The sender and receiver share the a symetric key (k) .Essentially, a MAC is an encrypted checksum generated on the underlying message that is sent along with a message to ensure message authentication.
 
@@ -175,7 +177,7 @@ The KeyGenerator class provides a method named init() this method accepts the Se
 Key key= keygen.generateKey();
 
 ```
-### Step 5: Creating and Initializw MAC object
+### Step 5: Creating and Initialize MAC object
 ```java
  //Creating and Initializing mac object
 Mac mac=Mac.getInstance("Hmacsha256");
@@ -193,7 +195,7 @@ System.out.println("Mac result:"+new String(macResult));
 ```
 The doFinal() method of the Mac class is used to finish the Mac operation
 
-### Example Code👩‍💻
+### Example Code1️⃣👩‍💻
 ```java
 import javax.crypto.KeyGenerator;
 import javax.crypto.Mac;
@@ -237,7 +239,7 @@ Mac result:<!NGI�r~���4|�5�ʥ�$�M4�t�vP
 Process finished with exit code 0
 
 ```
-### Example code
+### Example code2️⃣👩‍💻
 ```java
 import com.sun.crypto.provider.AESKeyGenerator;
 
@@ -259,6 +261,8 @@ public class Mac1 {
     }
 }
 ```
+
+---------------------------------------------------End of MAC✉---------------------------------------------------------------------------------
 
 
 
